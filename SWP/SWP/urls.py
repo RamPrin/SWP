@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from core.views import front
+from core.views import front, send_question_to_chat, chat
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', front, name="front")
+    path('', front, name="front"),
+    path('send_question/', send_question_to_chat, name="send_question"),
+    path('get_answer/', chat, name="get_answer")
 ]

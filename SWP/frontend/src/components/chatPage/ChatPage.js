@@ -29,7 +29,7 @@ const ChatPage = (props) => {
         console.log(me)
         axios({
                 method: 'GET',
-                url: 'send/',
+                url: 'get_answer/',
                 params:{
                     user_id: props.user_id,
                 }
@@ -56,7 +56,7 @@ const ChatPage = (props) => {
         if (str === '') return;
         axios({
                 method: 'POST',
-                url: 'send/',
+                url: 'send_question/',
                 params:{
                     chat_id: 4,
                 },
